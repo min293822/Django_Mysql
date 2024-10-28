@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+
+  <table>
+    <thead>
+      <tr>
+        <td>No.</td>
+        <td>Subject</td>
+        <td>Teacher</td>
+        <td>Grade</td>
+      </tr>
+  {% for subject in subjects %}
+      <tr>
+        <td>{{subject.id}}</td>
+        <td>{{subject.name}}</td>
+        <td>{{subject.teacher}}</td>
+        <td>{{subject.grade}}</td>
+      </tr>
+  {% endfor %}
+    </thead>
+  </table>
+
+</div>
+
+{% endblock %}
